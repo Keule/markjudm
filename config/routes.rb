@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :lasejobs
+
   resources :elements
 
   resources :pictures
