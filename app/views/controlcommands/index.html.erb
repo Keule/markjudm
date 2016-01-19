@@ -1,0 +1,27 @@
+<h1>Listing controlcommands</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Path</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @controlcommands.each do |controlcommand| %>
+      <tr>
+        <td><%= controlcommand.element %></td>
+        <td><%= controlcommand.path %></td>
+        <td><%= link_to 'Show', controlcommand %></td>
+        <td><%= link_to 'Edit', edit_controlcommand_path(controlcommand) %></td>
+        <td><%= link_to 'Destroy', controlcommand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Controlcommand', new_controlcommand_path %>
