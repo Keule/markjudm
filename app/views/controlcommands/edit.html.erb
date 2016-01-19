@@ -1,6 +1,5 @@
-<h1>Editing controlcommand</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @controlcommand %> |
-<%= link_to 'Back', controlcommands_path %>
+<%- model_class = Controlcommand -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Controlcommand %></h1>
+</div>
+<%= render :partial => 'form' %>
