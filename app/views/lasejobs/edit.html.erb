@@ -1,6 +1,5 @@
-<h1>Editing lasejob</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @lasejob %> |
-<%= link_to 'Back', lasejobs_path %>
+<%- model_class = Lasejob -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Lasejob %></h1>
+</div>
+<%= render :partial => 'form' %>
