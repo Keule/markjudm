@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :elements
+
   resources :pictures
 
   resources :textlines
