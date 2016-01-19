@@ -1,19 +1,26 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Picture -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Picture %></h1>
+</div>
 
-<p>
-  <strong>Element:</strong>
-  <%= @picture.element %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:image) %></dt>
+      <dd><pre class="prettyprint"><%= @picture.image %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:thumb) %></dt>
+      <dd><pre class="prettyprint"><%= @picture.thumb %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Image:</strong>
-  <%= @picture.image %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              pictures_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_picture_path(@picture), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              picture_path(@picture),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Thumb:</strong>
-  <%= @picture.thumb %>
-</p>
-
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
