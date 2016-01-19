@@ -1,6 +1,5 @@
-<h1>Editing textline</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @textline %> |
-<%= link_to 'Back', textlines_path %>
+<%- model_class = Textline -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Textline %></h1>
+</div>
+<%= render :partial => 'form' %>
