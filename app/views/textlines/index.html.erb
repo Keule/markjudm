@@ -1,0 +1,27 @@
+<h1>Listing textlines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>String</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @textlines.each do |textline| %>
+      <tr>
+        <td><%= textline.element %></td>
+        <td><%= textline.string %></td>
+        <td><%= link_to 'Show', textline %></td>
+        <td><%= link_to 'Edit', edit_textline_path(textline) %></td>
+        <td><%= link_to 'Destroy', textline, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Textline', new_textline_path %>
