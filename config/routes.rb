@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :collages
+
   resources :portfolios
 
   resources :lasejobs
